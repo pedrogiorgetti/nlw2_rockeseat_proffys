@@ -6,6 +6,44 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
   },
+  teacherList: {
+    marginTop: -40,
+  },
+  searchForm: {
+    marginBottom: 8,
+  },
+  label: {
+    color: "#d5c2ff",
+  },
+  inputGroup: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  inputBlock: {
+    width: "48%",
+  },
+  input: {
+    height: 54,
+    backgroundColor: "#fff",
+    borderRadius: 8,
+    justifyContent: "center",
+    paddingHorizontal: 8,
+    marginTop: 4,
+    marginBottom: 16,
+  },
+  submitButton: {
+    backgroundColor: "#04d361",
+    height: 56,
+    borderRadius: 8,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+  },
+  submitButtonText: {
+    color: "#fff",
+    fontFamily: "Archivo_700Bold",
+    fontSize: 16,
+  },
 });
 
 export default styles;
