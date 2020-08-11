@@ -1,0 +1,245 @@
+#register-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-text-in-primary);
+  position: relative;
+}
+
+#register-page-container .main-content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#register-page-container .main-content .background {
+  background-image: url("../../../assets/images/success-background.svg");
+  background-position: 50%;
+  background-size: contain;
+  padding: 1rem 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#register-page-container .main-content .background img {
+  width: 100%;
+}
+
+#register-page-container .main-content .background .subtitle {
+  font-size: 1.8rem;
+  display: block;
+}
+
+#register-page-container .main-content .form {
+  background: var(--color-background);
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#register-page-container .main-content .form .backButton {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+
+#register-page-container .main-content .form fieldset {
+  border: 0;
+  padding: 1rem 1.5rem;
+  max-width: 400px;
+  margin: 3rem auto 1rem;
+  width: 100%;
+}
+
+#register-page-container .main-content .form fieldset legend {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+}
+
+#register-page-container .main-content .form fieldset p {
+  font-size: 1.8rem;
+  color: var(--color-text-title);
+  margin: 2rem 0 3.5rem;
+}
+
+#register-page-container .main-content .form .input-group {
+  border-radius: 8px;
+  background: var(--color-box-base);
+}
+
+#register-page-container .main-content .form .input-field {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 1rem;
+}
+
+#register-page-container .main-content .form .input-field + .input-field {
+  border-top: 1px solid #ddd;
+}
+
+#register-page-container .main-content .form .input-field label {
+  position: absolute;
+  z-index: 0;
+  left: 2rem;
+  color: var(--color-text-complement);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: top left;
+  transform: translate(0, -15px) scale(0.75);
+}
+
+#register-page-container .main-content .form .input-field input {
+  width: 100%;
+  padding-left: 2rem;
+  height: 2rem;
+  border: 0;
+  z-index: 2;
+  background: transparent;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: var(--color-text-base);
+}
+
+#register-page-container .main-content .form .input-field input:focus {
+  border: 0;
+  outline: 0;
+}
+
+#register-page-container .main-content .form input:focus + label::before {
+  position: absolute;
+  content: "";
+  left: -2.9rem;
+  width: 3px;
+  height: 6rem;
+  background: var(--color-primary);
+}
+
+#register-page-container .main-content .form .actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 0;
+  padding: 0 0.3rem;
+}
+
+#register-page-container .main-content .form .actions .checkbox-container {
+  color: var(--color-text-complement);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+#register-page-container
+  .main-content
+  .form
+  .actions
+  .checkbox-container
+  input[type="checkbox"] {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+#register-page-container .main-content .form .actions .forgot-password {
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+#register-page-container .main-content .form .actions .forgot-password a {
+  color: var(--color-text-complement);
+  text-decoration: none;
+}
+
+#register-page-container .main-content .form button {
+  width: 100%;
+  height: 5rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  background: var(--color-secondary);
+  border: 0;
+  border-radius: 0.8rem;
+  color: var(--color-button-text);
+  cursor: pointer;
+}
+
+#register-page-container .main-content .form button:hover {
+  background: var(--color-secondary-dark);
+}
+
+#register-page-container .main-content .footer {
+  padding: 2rem 1rem;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#register-page-container .main-content .footer div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+#register-page-container .main-content .footer div p {
+  color: var(--color-text-base);
+  font-size: 1.4rem;
+}
+
+#register-page-container .main-content .footer div p a {
+  color: var(--color-primary-light);
+  font-weight: 600;
+}
+
+#register-page-container .main-content .footer div span {
+  text-align: right;
+
+  color: var(--color-text-complement);
+  font-size: 1.2rem;
+}
+
+#register-page-container .main-content .footer div span img {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  #register-page-container .main-content {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #register-page-container .main-content .background img {
+    max-width: 380px;
+  }
+
+  #register-page-container .main-content .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #register-page-container .main-content .form fieldset legend {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  #register-page-container .main-content .form .actions {
+    margin: 3rem 0 4rem;
+  }
+
+  #register-page-container .main-content .footer {
+    position: absolute;
+    bottom: 4rem;
+  }
+}

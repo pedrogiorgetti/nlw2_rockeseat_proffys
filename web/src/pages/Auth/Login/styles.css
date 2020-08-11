@@ -1,0 +1,237 @@
+#login-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-text-in-primary);
+  position: relative;
+}
+
+#login-page-container .main-content {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#login-page-container .main-content .background {
+  background-image: url("../../../assets/images/success-background.svg");
+  background-position: 50%;
+  background-size: contain;
+  padding: 1rem 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-page-container .main-content .background img {
+  width: 100%;
+}
+
+#login-page-container .main-content .background .subtitle {
+  font-size: 1.8rem;
+  display: block;
+}
+
+#login-page-container .main-content .form {
+  background: var(--color-background);
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}
+
+#login-page-container .main-content .form fieldset {
+  border: 0;
+  padding: 1rem 1.5rem;
+  max-width: 400px;
+  margin: 3rem auto 1rem;
+  width: 100%;
+}
+
+#login-page-container .main-content .form fieldset legend {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-text-title);
+}
+
+#login-page-container .main-content .form .input-group {
+  border-radius: 8px;
+  background: var(--color-box-base);
+}
+
+#login-page-container .main-content .form .input-field {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 1rem;
+}
+
+#login-page-container .main-content .form .input-field + .input-field {
+  border-top: 1px solid #ddd;
+}
+
+#login-page-container .main-content .form .input-field label {
+  position: absolute;
+  z-index: 0;
+  left: 2rem;
+  color: var(--color-text-complement);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: top left;
+  transform: translate(0, -15px) scale(0.75);
+}
+
+#login-page-container .main-content .form .input-field input {
+  width: 100%;
+  padding-left: 2rem;
+  height: 2rem;
+  border: 0;
+  z-index: 2;
+  background: transparent;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: var(--color-text-base);
+}
+
+#login-page-container .main-content .form .input-field input:focus {
+  border: 0;
+  outline: 0;
+}
+
+#login-page-container .main-content .form input:focus + label::before {
+  position: absolute;
+  content: "";
+  left: -2.9rem;
+  width: 3px;
+  height: 6rem;
+  background: var(--color-primary);
+}
+
+#login-page-container .main-content .form .actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 0;
+  padding: 0 0.3rem;
+}
+
+#login-page-container .main-content .form .actions .checkbox-container {
+  color: var(--color-text-complement);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+#login-page-container
+  .main-content
+  .form
+  .actions
+  .checkbox-container
+  input[type="checkbox"] {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
+
+#login-page-container .main-content .form .actions .forgot-password {
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+#login-page-container .main-content .form .actions .forgot-password a {
+  color: var(--color-text-complement);
+  text-decoration: none;
+}
+
+#login-page-container .main-content .form button {
+  width: 100%;
+  height: 5rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  background: var(--color-secondary);
+  border: 0;
+  border-radius: 0.8rem;
+  color: var(--color-button-text);
+  cursor: pointer;
+}
+
+#login-page-container .main-content .form button:hover {
+  background: var(--color-secondary-dark);
+}
+
+#login-page-container .main-content .footer {
+  padding: 2rem 1rem;
+  max-width: 390px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#login-page-container .main-content .footer div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+#login-page-container .main-content .footer div p {
+  color: var(--color-text-base);
+  font-size: 1.4rem;
+}
+
+#login-page-container .main-content .footer div p a {
+  color: var(--color-primary-light);
+  font-weight: 600;
+}
+
+#login-page-container .main-content .footer div span {
+  text-align: right;
+
+  color: var(--color-text-complement);
+  font-size: 1.2rem;
+}
+
+#login-page-container .main-content .footer div span img {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+  #login-page-container .main-content {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #login-page-container .main-content .background img {
+    max-width: 380px;
+  }
+
+  #login-page-container .main-content .background .subtitle {
+    font-size: 2.5rem;
+    max-width: 26rem;
+  }
+
+  #login-page-container .main-content .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #login-page-container .main-content .form fieldset legend {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  #login-page-container .main-content .form .actions {
+    margin: 3rem 0 4rem;
+  }
+
+  #login-page-container .main-content .footer {
+    position: absolute;
+    bottom: 4rem;
+  }
+}
